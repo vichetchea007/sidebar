@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="ISO-8859-1">
+  <meta http-equiv=Content-Type content="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; charset=windows-1252">
+ 
+  <title>Report</title>
+  <fragement th:replace="./menu/header.html"></fragement>
+</head>
+
+<body>
+  <script>
+    document.write(window.data);
+    window.open('data:application/vnd.ms-excel,' + encodeURIComponent(window.data));
+  </script>
+</body>
+
+</html>

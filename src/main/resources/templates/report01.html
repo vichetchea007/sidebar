@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Report</title>
+    <fragement th:replace="./menu/header.html"></fragement>
+    <script th:src="@{/script/toexcel.js}"></script>
+   </head>
+<body>
+  <div th:replace="./menu/sidebar.html"></div>
+  <section class="home-section">
+    <fragement th:replace="./menu/home-content.html"></fragement>
+
+    
+    <div class="body pt-2 text-sm">
+    
+      <button class="btn btn-small btn-primary" 
+      onclick="
+        var data = '';
+        var print = window.open('/print');
+        print.data = document.getElementById('printArea').outerHTML;
+        
+      "><i class='bx bx-printer'></i> Print</button> &nbsp;
+      <button class="btn btn-small btn-primary" 
+      onclick="
+          var html = document.getElementById('printArea').innerHTML;
+          toExcel(html, 'data.xls');
+      "><i class='bx bx-spreadsheet' ></i> To Excel</button>
+      
+    </div>
+    <div class="body pt-2 text-sm" id="printArea">
+      <h3 class="text-primary">This is Title of Report</h3>
+      <div th:replace="./data/data01.html"></div>
+    </div>
+
+  </section>
+  <script type="text/javascript" th:src="@{/script/script.js}"></script>
+</body>
+</html>

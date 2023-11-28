@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Report</title>
+    <fragement th:replace="./menu/header.html"></fragement>
+   </head>
+<body>
+  <div th:replace="./menu/sidebar.html"></div>
+  <section class="home-section">
+    <fragement th:replace="./menu/home-content.html"></fragement>
+
+    
+    <div class="body pt-2 text-sm">
+    
+      <h1>This is HOME PAGE</h1>
+
+    </div>
+
+  </section>
+  <script type="text/javascript" th:src="@{/script/script.js}"></script>
+</body>
+</html>
