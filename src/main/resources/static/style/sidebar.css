@@ -240,14 +240,22 @@ body{
   flex-wrap: wrap;
   background: #F2F2F2;
   padding: 10px;
+  
 }
+
 .home-section .body{
-  display: flex;
+  display: block ;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   background: white;
   padding: 10px;
+  overflow:scroll ;
+  overflow-x: hidden; 
+  height: calc(100% - 50px);
+
 }
+
+
 
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
@@ -287,5 +295,13 @@ body{
   .sidebar.close ~ .home-section{
     left: 78px;
     width: calc(100% - 78px);
+  }
+}
+
+@media print {
+  .home-section .body{
+
+    height: calc(120%);
+  
   }
 }
