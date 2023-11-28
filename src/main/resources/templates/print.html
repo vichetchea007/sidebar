@@ -8,7 +8,8 @@
    </head>
 <body>
   <script>
-    document.write(window.data);
+    var data = window.opener.document.getElementById('printArea').outerHTML
+    document.write(data);
     window.print();
   </script>
 </body>
